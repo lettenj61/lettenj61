@@ -1,0 +1,12 @@
+{
+  "name": "lettenj61",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "elm": "elm make src/Home.elm --output=static/js/home.js"
+  },
+  "devDependencies": {
+    "bulma": "^0.7.5",
+    "chokidar-cli": "^1.2.2"
+  }
+}

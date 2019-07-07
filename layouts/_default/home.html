@@ -1,0 +1,15 @@
+{{ define "meta" }}
+  <link rel="stylesheet" href="{{.Site.BaseURL}}/css/fontawesome-5.9.0.min.css">
+  {{ partial "custom-style.html" . }}
+  <script src="{{.Site.BaseURL}}/js/home.js"></script>
+{{ end }}
+
+{{ define "main" }}
+  <main id="elm"></main>
+  <script>
+    var app = Elm.Home.init({
+      node: document.getElementById('elm'),
+      flags: null
+    });
+  </script>
+{{ end }}
