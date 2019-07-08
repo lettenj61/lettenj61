@@ -7,9 +7,10 @@
 {{ define "main" }}
   <main id="elm"></main>
   <script>
+    var profile = JSON.parse('{{ .Site.Params.home | jsonify }}');
     var app = Elm.Home.init({
       node: document.getElementById('elm'),
-      flags: null
+      flags: profile
     });
   </script>
 {{ end }}

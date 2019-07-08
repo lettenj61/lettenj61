@@ -1,3 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "lettenj61"
+
+[params.home]
+  github = "lettenj61"
+  twitter = "boo_meh_lang"
