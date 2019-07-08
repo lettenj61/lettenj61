@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "elm": "elm make src/Home.elm --output=static/js/home.js"
+    "elm": "elm make src/Home.elm --output=static/js/home.js --optimize"
   },
   "devDependencies": {
     "bulma": "^0.7.5",
