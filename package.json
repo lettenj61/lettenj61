@@ -6,7 +6,6 @@
     "elm": "elm make src/Home.elm --output=static/js/home.js --optimize"
   },
   "devDependencies": {
-    "bulma": "^0.7.5",
-    "chokidar-cli": "^1.2.2"
+    "bulma": "^0.8.0"
   }
 }
