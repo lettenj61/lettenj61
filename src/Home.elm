@@ -122,7 +122,7 @@ viewNavbar { navbarVisible } =
 
         navbarMenu =
             div
-                ([ class "navbar-menu" ] ++ navbarActive)
+                (class "navbar-menu" :: navbarActive)
                 [ wrapper "navbar-end" <|
                     [ navbarItem "About"
                     , navbarItem "Project"
@@ -231,7 +231,7 @@ container ( tagger, wrapperClass ) attrs children =
     tagger
         [ class wrapperClass ]
         [ div
-            ([ class "container" ] ++ attrs)
+            ( class "container" :: attrs )
             children
         ]
 
@@ -244,5 +244,5 @@ wrapper className children =
 flexColumn : List (Attribute msg) -> List (Html msg) -> Html msg
 flexColumn attrs children =
     div
-        ([ class "column" ] ++ attrs)
+        ( class "column"  :: attrs )
         children
