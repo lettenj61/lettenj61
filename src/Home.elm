@@ -124,9 +124,7 @@ viewNavbar { navbarVisible } =
             div
                 (class "navbar-menu" :: navbarActive)
                 [ wrapper "navbar-end" <|
-                    [ navbarItem "About"
-                    , navbarItem "Project"
-                    , navbarItem "Blog"
+                    [
                     ]
                 ]
 
@@ -137,18 +135,17 @@ viewNavbar { navbarVisible } =
     in
     nav
         [ class "navbar is-white" ]
-        [ wrapper "container" <|
-            [ wrapper "navbar-brand" <|
-                [ div
-                    [ class "navbar-item" ]
-                    [ span
-                        [ class "is-size-5" ]
-                        [ text "lettenj61" ]
+        [ wrapper "navbar-brand" <|
+            [ a
+                [ class "navbar-item", href "/" ]
+                [ span
+                    [ class "is-size-5"
                     ]
-                , navbarBurger
+                    [ strong [] [ text "lettenj61" ] ]
                 ]
-            , navbarMenu
+            , navbarBurger
             ]
+        , navbarMenu
         ]
 
 
@@ -160,7 +157,7 @@ viewSocialLinks { profile } =
                 [ class <| "button is-rounded " ++ wrapperClass
                 , href path
                 , target "_blank"
-                , rel "noopener"
+                , rel "noopener noreferrer"
                 , title desc
                 ]
                 [ span
@@ -179,9 +176,9 @@ viewSocialLinks { profile } =
             "https://scrapbox.io/" ++ profile.github
 
         socialLinks =
-            [ makeLink twitterLink "is-info" "fab fa-lg fa-twitter" ("Follow @" ++ profile.twitter)
-            , makeLink githubLink "is-dark" "fab fa-lg fa-github-alt" "GitHub activity"
-            , makeLink scrapboxLink "is-success" "fas fa-lg fa-pencil-ruler" "Scrapbox notes"
+            [ makeLink twitterLink "is-info" "mdi mdi-24px mdi-twitter" ("Follow @" ++ profile.twitter)
+            , makeLink githubLink "is-dark" "mdi mdi-24px mdi-github" "GitHub activity"
+            , makeLink scrapboxLink "is-success" "mdi mdi-24px mdi-pencil-ruler" "Scrapbox notes"
             ]
     in
     container ( section, "section" ) [] <|
@@ -196,9 +193,9 @@ viewFooter =
     container
         ( footer, "footer" )
         [ class "has-text-centered" ]
-        [ p
+        [ small
             []
-            [ text "2019 @lettenj61. Powered by "
+            [ text "© 2019-Present @lettenj61 (Hideyuki Ueno). Powered by "
             , a [] [ text "Elm" ]
             , text ", "
             , a [] [ text "Hugo" ]

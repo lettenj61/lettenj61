@@ -1,0 +1,21 @@
+{{ define "meta" }}
+  <link rel="stylesheet" href="{{.Site.BaseURL}}css/highlight.css">
+  <link rel="stylesheet" href="{{.Site.BaseURL}}css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="{{.Site.BaseURL}}css/kaigara-bulma.min.css">
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "navbar.html" . }}
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8-desktop is-offset-2-desktop">
+          <div class="content">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ partial "footer.html" . }}
+{{ end }}

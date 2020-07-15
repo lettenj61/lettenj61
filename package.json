@@ -6,6 +6,6 @@
     "elm": "elm make src/Home.elm --output=static/js/home.js --optimize"
   },
   "devDependencies": {
-    "bulma": "^0.8.0"
+    "bulma": "^0.9.0"
   }
 }

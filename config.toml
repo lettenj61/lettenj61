@@ -1,6 +1,16 @@
-baseURL = "http://example.org/"
+baseURL = "http://lettenj61.github.io/"
 languageCode = "en-us"
 title = "lettenj61"
+
+hasCJKLanguage = true
+
+[markup]
+  [markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+  [markup.highlight]
+    noClasses = false
 
 [params.home]
   github = "lettenj61"
